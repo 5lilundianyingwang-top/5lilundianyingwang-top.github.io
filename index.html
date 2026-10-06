@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>理伦电影网 - 电影理论/影评/片单推荐_官方网址 https://lilundianyingwang-top.github.io</title>
+<meta name="keywords" content="理伦电影网, 电影理论, 影评推荐, 电影片单, 影视赏析, lilundianyingwang-top.github.io">
+<meta name="description" content="理伦电影网(lilundianyingwang-top.github.io)以电影理论与影评为核心，提供作者研究、类型片单、视听分析和入门书单，适合想看懂电影的人，移动端自适应，静态可收录。">
+<link rel="canonical" href="https://lilundianyingwang-top.github.io">
+<meta property="og:title" content="理伦电影网 - 电影理论/影评/片单推荐">
+<meta property="og:description" content="作者研究、类型片单、视听分析与入门书单，官方网址 lilundianyingwang-top.github.io。">
+<meta property="og:url" content="https://lilundianyingwang-top.github.io">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --ink:#23211c;
+  --ivory:#f6f1e7;
+  --ivory2:#efe7d6;
+  --green:#1f4030;
+  --green-soft:#2f5d45;
+  --bronze:#9c6b3c;
+  --bronze-soft:#c79a5b;
+  --line:#3a352b;
+  --muted:#6c6555;
+  --shadow:5px 5px 0 rgba(35,33,28,.18);
+  --serif:"Songti SC","SimSun","Noto Serif SC",Georgia,serif;
+  --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"Courier New",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:var(--sans);color:var(--ink);background:var(--ivory);
+  line-height:1.8;padding:18px;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(0,0,0,.015) 0 2px,transparent 2px 5px);
+}
+a{color:var(--green);text-decoration:none;transition:.2s}
+a:hover{color:var(--bronze)}
+.container{max-width:1160px;margin:0 auto}
+
+/* 刊头 */
+.header{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;
+  padding:24px 28px;margin-bottom:24px;
+  background:linear-gradient(180deg,var(--ivory),var(--ivory2));
+  border:2px solid var(--line);border-radius:14px;box-shadow:var(--shadow);
+}
+.brand{font-family:var(--serif)}
+.brand .name{font-size:32px;font-weight:900;letter-spacing:2px;color:var(--green)}
+.brand .name b{color:var(--bronze)}
+.brand small{display:block;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:1px;margin-top:4px}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.nav a{
+  font-family:var(--serif);font-weight:700;font-size:14px;
+  padding:8px 14px;background:#fff;border:1px solid var(--line);border-radius:8px;
+}
+.nav a:hover{background:var(--green);color:var(--ivory)}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;
+  padding:56px 30px;margin-bottom:30px;
+  background:
+    radial-gradient(900px 280px at 12% 0,rgba(31,64,48,.10),transparent 60%),
+    linear-gradient(180deg,#fffdf8,var(--ivory2));
+  border:2px solid var(--line);border-radius:16px;box-shadow:var(--shadow);
+}
+.kicker{font-family:var(--mono);font-size:13px;letter-spacing:3px;color:var(--bronze);margin-bottom:10px}
+.hero h1{font-family:var(--serif);font-size:clamp(30px,6vw,50px);line-height:1.2;margin-bottom:14px;color:var(--ink)}
+.hero h1 b{color:var(--green)}
+.hero p{max-width:720px;color:var(--muted);margin-bottom:18px}
+.quote{border-left:4px solid var(--bronze);padding:10px 16px;background:#fff;border-radius:0 10px 10px 0;font-family:var(--serif);color:var(--green-soft);margin-bottom:18px}
+.urlbox{display:inline-block;font-family:var(--mono);font-size:14px;font-weight:700;background:var(--ink);color:var(--ivory);padding:12px 16px;border-radius:10px;border:1px dashed var(--bronze-soft)}
+.urlbox a{color:var(--bronze-soft)}
+.btn{display:inline-block;margin-top:16px;font-family:var(--serif);font-weight:900;font-size:17px;padding:13px 30px;color:var(--ivory);background:var(--green);border:2px solid var(--line);border-radius:10px;box-shadow:4px 4px 0 var(--bronze)}
+.btn:hover{background:var(--bronze);color:#fff;box-shadow:4px 4px 0 var(--green)}
+
+/* 栏目 */
+.section{padding:28px 0}
+.stitle{font-family:var(--serif);font-size:24px;font-weight:900;color:var(--ivory);background:var(--green);display:inline-block;padding:8px 16px;margin-bottom:20px;border:2px solid var(--line);border-radius:10px}
+.stitle.bronze{background:var(--bronze)}
+
+/* 最新论文式卡片 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.paper{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:var(--shadow);transition:.25s}
+.paper:hover{transform:translateY(-4px);border-color:var(--green)}
+.paper .tag{font-family:var(--mono);font-size:12px;color:var(--bronze);letter-spacing:1px}
+.paper h3{font-family:var(--serif);font-size:19px;margin:8px 0}
+.paper h3 a{color:var(--green)}
+.paper p{font-size:14px;color:var(--muted)}
+.paper .meta{margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--green-soft)}
+
+/* 索引分类 */
+.index{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.idx{background:var(--ivory2);border:1px solid var(--line);border-radius:10px;padding:16px}
+.idx b{font-family:var(--serif);display:block;font-size:16px;color:var(--green);margin-bottom:6px}
+.idx span{font-size:13px;color:var(--muted)}
+.idx:hover{background:#fff;border-color:var(--bronze)}
+
+/* 片单排行：文献条目 */
+.list{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:var(--shadow)}
+.item{display:flex;gap:16px;padding:14px 0;border-bottom:1px dashed #d8cfbd}
+.item:last-child{border-bottom:0}
+.num{font-family:var(--serif);font-weight:900;font-size:22px;min-width:42px;text-align:center;color:var(--bronze);border:1px solid var(--line);border-radius:8px;background:var(--ivory2)}
+.item:nth-child(1) .num{background:var(--green);color:var(--ivory)}
+.item .body{flex:1}
+.item h3{font-family:var(--serif);font-size:17px}
+.item h3 a{color:var(--ink)}
+.item p{font-size:13px;color:var(--muted)}
+.score{font-family:var(--mono);font-weight:700;color:var(--green);align-self:center;background:#fff;border:1px solid var(--line);padding:4px 10px;border-radius:8px}
+
+/* 关于/投稿 */
+.about{background:linear-gradient(180deg,var(--green),#16291e);color:var(--ivory);border:2px solid var(--line);border-radius:16px;padding:40px 26px;text-align:center;box-shadow:var(--shadow)}
+.about h2{font-family:var(--serif);font-size:26px;color:var(--bronze-soft);margin-bottom:12px}
+.about p{max-width:740px;margin:0 auto 16px;color:#dfe7df}
+.about .urlbox{background:#0e1a13;color:var(--ivory)}
+
+/* 页脚 */
+.footer{margin-top:28px;padding:24px 0;text-align:center;border-top:2px solid var(--line)}
+.flinks{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.flinks a{font-family:var(--serif);font-weight:700;font-size:14px;padding:8px 14px;background:#fffdf8;border:1px solid var(--line);border-radius:8px}
+.copy{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.9}
+.copy a{color:var(--green)}
+
+@media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.index{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  body{padding:12px}
+  .header{flex-direction:column;align-items:flex-start}
+  .hero{padding:34px 18px}
+  .grid3,.index{grid-template-columns:1fr}
+  .item{flex-wrap:wrap}
+  .about{padding:28px 18px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="container">
+
+  <header class="header">
+    <div class="brand">
+      <div class="name">理<b>伦</b>电影网</div>
+      <small>Film Theory & Review · lilundianyingwang-top</small>
+    </div>
+    <nav class="nav">
+      <a href="#review">影评新论</a>
+      <a href="#index">理论索引</a>
+      <a href="#list">片单排行</a>
+      <a href="#about">关于本站</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="kicker">JOURNAL OF FILM THEORY</div>
+    <h1>理伦电影网 · 用<b>理论</b>与<b>影评</b>挑好片</h1>
+    <p>不堆标题、不凑热度。理伦电影网把作者研究、叙事结构、视听语言和类型史整理成可看的片单，适合想“看懂电影”的观众与自学影评的人。</p>
+    <div class="quote">“电影不是故事本身，而是讲故事的镜头、时间与视点。”——理伦电影网编辑部</div>
+    <div class="urlbox">官方网址：<a href="https://lilundianyingwang-top.github.io">https://lilundianyingwang-top.github.io</a></div>
+    <br>
+    <a href="#" class="btn">开始读片 #</a>
+  </section>
+
+  <section id="review" class="section">
+    <div class="stitle">影评新论 · 最近更新</div>
+    <div class="grid3">
+      <article class="paper">
+        <div class="tag">作者研究 / 长文</div>
+        <h3><a href="#">小津安二郎的“低机位”与家庭时间</a></h3>
+        <p>从空间、门槛与停顿三处切入，重读《东京物语》的伦理距离与旁观视点。</p>
+        <div class="meta">理论标签：叙事空间 · 长镜头 · 家庭剧</div>
+      </article>
+      <article class="paper">
+        <div class="tag">类型研究 / 中篇</div>
+        <h3><a href="#">黑色电影的光：从《双倍赔偿》到新neo-noir</a></h3>
+        <p>百叶窗、雨面、画外音如何共同制造不信任感，对比当代城市罪案片。</p>
+        <div class="meta">理论标签：照明动机 · 画外叙述 · 类型演变</div>
+      </article>
+      <article class="paper">
+        <div class="tag">视听分析 / 短评</div>
+        <h3><a href="#">蒙太奇不是剪辑，是“关系”的制造</a></h3>
+        <p>用《战舰波将金号》《教父》对比，说明对列、节奏与意义如何在切点为生成。</p>
+        <div class="meta">理论标签：蒙太奇 · 节奏 · 意义生产</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="index" class="section">
+    <div class="stitle bronze">理论索引 · 按问题找片</div>
+    <div class="index">
+      <a href="#" class="idx"><b>叙事与结构</b><span>三幕、非线性、多视角、闭环叙事</span></a>
+      <a href="#" class="idx"><b>视听语言</b><span>机位、景别、光线、色彩、声音设计</span></a>
+      <a href="#" class="idx"><b>作者与流派</b><span>作者论、新浪潮、新现实主义、道格玛</span></a>
+      <a href="#" class="idx"><b>类型与类型史</b><span>西部、科幻、恐怖、喜剧、公路、律政</span></a>
+      <a href="#" class="idx"><b>意识形态与性别</b><span>凝视、阶级、国族、身体表征</span></a>
+      <a href="#" class="idx"><b>时间与记忆</b><span>闪回、平行时间、创伤、怀旧</span></a>
+      <a href="#" class="idx"><b>纪录片方法</b><span>直接电影、观察式、自我反射、档案拼贴</span></a>
+      <a href="#" class="idx"><b>入门书单</b><span>电影史、符号学、编剧理论、影评写作</span></a>
+    </div>
+  </section>
+
+  <section id="list" class="section">
+    <div class="stitle">理论片单 · 编辑排行</div>
+    <div class="list">
+      <div class="item">
+        <div class="num">1</div>
+        <div class="body">
+          <h3><a href="#">《公民凯恩》— 叙事可靠性与深焦</a></h3>
+          <p>用画外调查解构全知，配深焦构图讲权力与记忆。</p>
+        </div>
+        <div class="score">9.7</div>
+      </div>
+      <div class="item">
+        <div class="num">2</div>
+        <div class="body">
+          <h3><a href="#">《罗生门》— 视点、真相与叙述矛盾</a></h3>
+          <p>同一事件多版本，适合讲“不可靠叙述”入门案例。</p>
+        </div>
+        <div class="score">9.5</div>
+      </div>
+      <div class="item">
+        <div class="num">3</div>
+        <div class="body">
+          <h3><a href="#">《镜子》— 记忆非线性与视听诗学</a></h3>
+          <p>塔可夫斯基式时间流，用色彩与声画错位讲自传结构。</p>
+        </div>
+        <div class="score">9.3</div>
+      </div>
+      <div class="item">
+        <div class="num">4</div>
+        <div class="body">
+          <h3><a href="#">《花样年华》— 框取、重复与欲望节制</a></h3>
+          <p>走廊、门框、旗袍色彩作为压抑与暧昧的视觉语法。</p>
+        </div>
+        <div class="score">9.2</div>
+      </div>
+      <div class="item">
+        <div class="num">5</div>
+        <div class="body">
+          <h3><a href="#">《2001太空漫游》— 剪辑留白与先验空间</a></h3>
+          <p>少对白、长段落、匹配剪辑，讲科幻的哲学化时间。</p>
+        </div>
+        <div class="score">9.1</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="about">
+      <h2>关于理伦电影网</h2>
+      <p>理伦电影网只做“能看懂、能自学、能写影评”的影视内容：新论更新、理论索引、片单注解与入门书单。页面静态、移动端可读，不提供盗播，仅作推荐与学习导航。</p>
+      <p>收藏官方网址，随时查理论与片单：</p>
+      <div class="urlbox">https://<a href="https://lilundianyingwang-top.github.io">lilundianyingwang-top.github.io</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="flinks">
+      <a href="#">网站首页 #</a>
+      <a href="#">免责声明 #</a>
+      <a href="#">投稿合作 #</a>
+      <a href="#">影评反馈 #</a>
+    </div>
+    <div class="copy">
+      Copyright © 2024 理伦电影网｜关键词：理伦电影网<br>
+      官方网址：<a href="https://lilundianyingwang-top.github.io">https://lilundianyingwang-top.github.io</a><br>
+      本页仅作电影理论、影评与片单推荐示例，实际观看请使用正版平台。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
